@@ -4,8 +4,8 @@
 	box-sizing: border-box;
 }
 :root{
-	--font-sans:Helvetica,Arial,sans-serif;
-	--font-serif:Cambria,Georgia,serif;
+	--font-sans: Helvetica, Arial, sans-serif;
+	--font-serif: Cambria, Georgia, serif;
 
    --color-neutral-lighter: #edf0ed;
    --color-neutral-light: #d2dad2;
