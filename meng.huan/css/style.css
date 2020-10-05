@@ -98,6 +98,24 @@ a:hover {
    margin-bottom: 0;
 }
 
+/*ACCORDION*/
+.accordion dt {
+    background-color: var(--color-neutral-mediumer);
+    padding: 0.5em 1em;
+    color: var(--color-white);
+}
+.accordion dt~dt {
+   margin-top:0.5em;
+}
+.accordion dd {
+    margin: 0;
+    padding: calc(1em - 2px);
+    border: 2px solid var(--color-neutral-mediumer);
+}
+
+
+
+
 
 @media (max-width:1000px) {
    .container {
