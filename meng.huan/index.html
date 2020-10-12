@@ -16,8 +16,11 @@
 <body>
 
    <section data-role="page"  id="signin-page">
-      <div data-role="main" class="display-flex flex-align-center flex-justify-center">
-<!--          <div class="flex-stretch"></div> -->
+      <div data-role="main" class="display-flex flex-column">
+         <div class="flex-stretch display-flex flex-align-center flex-justify-center">
+         <img src="imgs/onboarding_1.svg" style="width:76vw;height:106vw;">
+         </div>
+         </div>
          <form id="signin-form" data-ajax="false">
             <div class="form-control">
                <label for="signin-username" class="form-label">Username</label>
@@ -33,7 +36,7 @@
             </div>
             <div class="form-control signin-alt" >
                Don't have an account?
-               <a href="#signup-page">Sign Up</a>
+               <a href="#signup-page" class="link-primary">Sign Up</a>
             </div>
          </form>
       </div>
@@ -60,67 +63,495 @@
             </div>
             <div class="form-control signup-alt" >
                Already have an account?
-               <a href="#signin-page">Sign In</a>
+               <a href="#signin-page" class="link-primary">Sign In</a>
             </div>
          </form>
       </div>
    </section>
 
-   <section data-role="page"  id="recent-page">
-      <div data-role="main"></div>
+   <section data-role="page" id="recent-page">
+      <header data-role="header">
+         <h1>Icon Tracker</h1>
+      </header>
+      <div data-role="main"></div>  
       <footer data-role="footer">
-         <ul>
-            <li><a href="#recent-page">Recent</a></li>
-            <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
+         <ul class="nav flex-parent" style="text-align:center">
+            <li class="flex-child active">
+               <a href="#recent-page">
+                  <img src="imgs/location.svg" alt="" width="24">
+               </a>
+            </li>
+            <li class="flex-child">
+               <a href="#list-page">
+                  <img src="imgs/list.svg" alt="" width="24">
+               </a>
+            </li>
+            <li class="flex-child">
+               <a href="#user-profile-page">
+                  <img src="imgs/profile.svg" alt="" width="24">
+               </a>
+            </li>
          </ul>
-      </footer>    
+      </footer>
    </section>  
 
+<!-- LIST PAGE -->
    <section data-role="page"  id="list-page">
       <header data-role="header">
-         <h1>List Page</h1>
+         <h1>Icon List</h1>
+            <ul class="nav flex-parent">
+               <li class="flex-child"></li>
+               <li class="flex-none">
+                  <a href="#page-add-new" data-role="none" class="add-btn">
+                     <img src="imgs/add.svg" alt="" width="18px" style="margin-top: 1em; margin-right: 1em;">
+                  </a>
+               </li>
+            </ul>
       </header>
-      <div data-role="main">
-         <ul>
-            <li><a href="#icon-profile-page">Icon 1</a></li>
-            <li><a href="#icon-profile-page">Icon 2</a></li>
-            <li><a href="#icon-profile-page">Icon 3</a></li>
-            <li><a href="#icon-profile-page">Icon 4</a></li>
-            <li><a href="#icon-profile-page">Icon 5</a></li>
-            <li><a href="#icon-profile-page">Icon 6</a></li>
-            <li><a href="#icon-profile-page">Icon 7</a></li>
-            <li><a href="#icon-profile-page">Icon 8</a></li>
-            <li><a href="#icon-profile-page">Icon 9</a></li>
-            <li><a href="#icon-profile-page">Icon 10</a></li>
-         </ul>
+      <div class="list-page-bg" data-role="main">
+         <div class="container list-page">
+            <div data-role="main" class="flex-parent flex-vertical">
+               <div class="flex-none" style="position:relative;">
+                  <form class="search-box flex-parent flex-align-center" data-role="none" data-ajax="false">
+                     <div class="flex-child">
+                        <label class="hotdog list-search-box" data-role="none" data-ajax="false">
+                           <input type="search" data-ajax="false" data-role="none" class="list-search" placeholder="Search...">
+                        </label>
+                     </div>
+                     <div class="flex-none">
+                        <img src="imgs/filter.svg" class="icon" style="margin-left:1em" data-toggle="#list-page .filter-box">
+                     </div>
+                  </form>
+               </div>
+               <div class="flex-child" style="position:relative;">
+                  <div class="icon-list">
+                    <div class="list-main">   
+                     <div class="icon-list">
+                         <div class="icons flex-parent flex-align-center">
+                             <div class="flex-none list-content media-image">
+                                 <img src="imgs/icon_placeholder.svg" alt="icon image" style="width:6em;height:6em;">
+                             </div>
+                         <a href="#icon-profile-page">
+                             <div class="flex-child list-content">
+                                <div class="flex-child list-title">
+                                 Street Board Icon1
+                                </div>
+                                <div class="flex-child list-text">
+                                Champion, Flat
+                                </div>
+                             </div>
+                        </a>
+                         </div>
+                     </div>
+                  </div>
+                  <div class="list-main">   
+                     <div class="icon-list">
+                         <div class="icons flex-parent flex-align-center">
+                             <div class="flex-none list-content media-image">
+                                 <img src="imgs/icon_placeholder.svg" alt="icon image" style="width:6em;height:6em;">
+                             </div>
+                           <a href="#icon-profile-page">
+                             <div class="flex-child list-content">
+                                <div class="flex-child list-title">
+                                 Street Board Icon2
+                                </div>
+                                <div class="flex-child list-text">
+                                Champion, Flat
+                                </div>
+                             </div>
+                           </a>
+                         </div>
+                     </div>
+                  </div>
+                  <div class="list-main">   
+                     <div class="icon-list">
+                         <div class="icons flex-parent flex-align-center">
+                             <div class="flex-none list-content media-image">
+                                 <img src="imgs/icon_placeholder.svg" alt="icon image" style="width:6em;height:6em;">
+                             </div>
+                           <a href="#icon-profile-page">
+                             <div class="flex-child list-content">
+                                <div class="flex-child list-title">
+                                 Street Board Icon
+                                </div>
+                                <div class="flex-child list-text">
+                                Champion, Flat
+                                </div>
+                             </div>
+                           </a>
+                         </div>
+                     </div>
+                  </div>
+                  <div class="list-main">   
+                     <div class="icon-list">
+                         <div class="icons flex-parent flex-align-center">
+                             <div class="flex-none list-content media-image">
+                                 <img src="imgs/icon_placeholder.svg" alt="icon image" style="width:6em;height:6em;">
+                             </div>
+                           <a href="#icon-profile-page">
+                             <div class="flex-child list-content">
+                                <div class="flex-child list-title">
+                                 Street Board Icon
+                                </div>
+                                <div class="flex-child list-text">
+                                Champion, Flat
+                                </div>
+                             </div>
+                           </a>
+                         </div>
+                     </div>
+                  </div>
+                  <div class="list-main">   
+                     <div class="icon-list">
+                         <div class="icons flex-parent flex-align-center">
+                             <div class="flex-none list-content media-image">
+                                 <img src="imgs/icon_placeholder.svg" alt="icon image" style="width:6em;height:6em;">
+                             </div>
+                           <a href="#icon-profile-page">
+                             <div class="flex-child list-content">
+                                <div class="flex-child list-title">
+                                 Street Board Icon
+                                </div>
+                                <div class="flex-child list-text">
+                                Champion, Flat
+                                </div>
+                             </div>
+                           </a>
+                         </div>
+                     </div>
+                  </div>
+                  <div class="list-main">   
+                     <div class="icon-list">
+                         <div class="icons flex-parent flex-align-center">
+                             <div class="flex-none list-content media-image">
+                                 <img src="imgs/icon_placeholder.svg" alt="icon image" style="width:6em;height:6em;">
+                             </div>
+                           <a href="#icon-profile-page">
+                             <div class="flex-child list-content">
+                                <div class="flex-child list-title">
+                                 Street Board Icon
+                                </div>
+                                <div class="flex-child list-text">
+                                Champion, Flat
+                                </div>
+                             </div>
+                           </a>
+                         </div>
+                     </div>
+                  </div>
+                  <div class="list-main">   
+                     <div class="icon-list">
+                         <div class="icons flex-parent flex-align-center">
+                             <div class="flex-none list-content media-image">
+                                 <img src="imgs/icon_placeholder.svg" alt="icon image" style="width:6em;height:6em;">
+                             </div>
+                           <a href="#icon-profile-page">
+                             <div class="flex-child list-content">
+                                <div class="flex-child list-title">
+                                 Street Board Icon
+                                </div>
+                                <div class="flex-child list-text">
+                                Champion, Flat
+                                </div>
+                             </div>
+                           </a>
+                         </div>
+                     </div>
+                  </div>
+                  <div class="list-main">   
+                     <div class="icon-list">
+                         <div class="icons flex-parent flex-align-center">
+                             <div class="flex-none list-content media-image">
+                                 <img src="imgs/icon_placeholder.svg" alt="icon image" style="width:6em;height:6em;">
+                             </div>
+                           <a href="#icon-profile-page">
+                             <div class="flex-child list-content">
+                                <div class="flex-child list-title">
+                                 Street Board Icon
+                                </div>
+                                <div class="flex-child list-text">
+                                Champion, Flat
+                                </div>
+                             </div>
+                           </a>
+                         </div>
+                     </div>
+                  </div>
+                  <div class="list-main">   
+                     <div class="icon-list">
+                         <div class="icons flex-parent flex-align-center">
+                             <div class="flex-none list-content media-image">
+                                 <img src="imgs/icon_placeholder.svg" alt="icon image" style="width:6em;height:6em;">
+                             </div>
+                           <a href="#icon-profile-page">
+                             <div class="flex-child list-content">
+                                <div class="flex-child list-title">
+                                 Street Board Icon
+                                </div>
+                                <div class="flex-child list-text">
+                                Champion, Flat
+                                </div>
+                             </div>
+                           </a>
+                         </div>
+                     </div>
+                  </div>
+                  <div class="list-main">   
+                     <div class="icon-list">
+                         <div class="icons flex-parent flex-align-center">
+                             <div class="flex-none list-content media-image">
+                                 <img src="imgs/icon_placeholder.svg" alt="icon image" style="width:6em;height:6em;">
+                             </div>
+                           <a href="#icon-profile-page">
+                             <div class="flex-child list-content">
+                                <div class="flex-child list-title">
+                                 Street Board Icon
+                                </div>
+                                <div class="flex-child list-text">
+                                Champion, Flat
+                                </div>
+                             </div>
+                           </a>
+                         </div>
+                     </div>
+                  </div>
+                  <div class="list-main">   
+                     <div class="icon-list">
+                         <div class="icons flex-parent flex-align-center">
+                             <div class="flex-none list-content media-image">
+                                 <img src="imgs/icon_placeholder.svg" alt="icon image" style="width:6em;height:6em;">
+                             </div>
+                           <a href="#icon-profile-page">
+                             <div class="flex-child list-content">
+                                <div class="flex-child list-title">
+                                 Street Board Icon
+                                </div>
+                                <div class="flex-child list-text">
+                                Champion, Flat
+                                </div>
+                             </div>
+                           </a>
+                         </div>
+                     </div>
+                  </div>
+                  <div class="list-main">   
+                     <div class="icon-list">
+                         <div class="icons flex-parent flex-align-center">
+                             <div class="flex-none list-content media-image">
+                                 <img src="imgs/icon_placeholder.svg" alt="icon image" style="width:6em;height:6em;">
+                             </div>
+                            <a href="#icon-profile-page">
+                             <div class="flex-child list-content">
+                                <div class="flex-child list-title">
+                                 Street Board Icon
+                                </div>
+                                <div class="flex-child list-text">
+                                Champion, Flat
+                                </div>
+                             </div>
+                           </a>
+                         </div>
+                     </div>
+                  </div>
+                  <div class="list-main">   
+                     <div class="icon-list">
+                         <div class="icons flex-parent flex-align-center">
+                             <div class="flex-none list-content media-image">
+                                 <img src="imgs/icon_placeholder.svg" alt="icon image" style="width:6em;height:6em;">
+                             </div>
+                           <a href="#icon-profile-page">
+                             <div class="flex-child list-content">
+                                <div class="flex-child list-title">
+                                 Street Board Icon
+                                </div>
+                                <div class="flex-child list-text">
+                                Champion, Flat
+                                </div>
+                             </div>
+                           </a>
+                         </div>
+                     </div>
+                  </div>
+                  <div class="list-main">   
+                     <div class="icon-list">
+                         <div class="icons flex-parent flex-align-center">
+                             <div class="flex-none list-content media-image">
+                                 <img src="imgs/icon_placeholder.svg" alt="icon image" style="width:6em;height:6em;">
+                             </div>
+                           <a href="#icon-profile-page">
+                             <div class="flex-child list-content">
+                                <div class="flex-child list-title">
+                                 Street Board Icon
+                                </div>
+                                <div class="flex-child list-text">
+                                Champion, Flat
+                                </div>
+                             </div>
+                           </a>
+                         </div>
+                     </div>
+                  </div>
+               </div>
+               </div>
+            </div>
+         </div>
       </div>
       <footer data-role="footer">
-         <ul>
-            <li><a href="#recent-page">Recent</a></li>
-            <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
-         </ul>
+            <ul class="nav flex-parent" style="text-align:center">
+               <li class="flex-child active">
+                  <a href="#recent-page">
+                     <img src="imgs/location.svg" alt="" width="24">
+                  </a>
+               </li>
+               <li class="flex-child">
+                  <a href="#list-page">
+                     <img src="imgs/list.svg" alt="" width="24">
+                  </a>
+               </li>
+               <li class="flex-child">
+                  <a href="#user-profile-page">
+                     <img src="imgs/profile.svg" alt="" width="24">
+                  </a>
+               </li>
+            </ul>
       </footer>
+   </section>
+<!-- ADD NEW PAGE -->
+   <section data-role="page" id="page-add-new">
+   <div data-role="main" class="flex-parent flex-vertical flex-align-center"> 
+         <div class="big-title"><h1>Add New Icon</h1>
+         </div>
+         <ul>
+            <div class="back">
+               <a href="#back" data-rel="back" data-role="none" data-ajax="false">
+                  <img src="imgs/back.svg" alt="" width="16">
+               </a>
+            </div>
+         </ul>
+      <div class="add-img-div" data-role="none" style="text-align: center;">
 
+         <form id="list-add-form" data-role="none" data-ajax="false" style="width:70vw;">
+            <label class="add-img imagepicker imagepicker-replace thumbnail" data-role="none">
+               <input type="file" data-role="none">
+            </label>
+            <div class="form-control">
+               <label class="form-label" for="list-add-name">Create a name</label>
+               <input class="form-input" type="text" id="list-add-name" data-role="none" style="text-align: center;">
+            </div>            
+            <div class="form-control">
+               <label class="form-label" for="list-add-brand">What's the content</label>
+               <input class="form-input" type="text" id="list-add-brand" data-role="none" style="text-align: center;">
+            </div>            
+            <div class="form-control">
+               <label class="form-label" for="list-add-type">What style</label>                    
+                  <div class="addnew-selections selection-field flex-justify-center" id="list-add-type">
+                   
+                     <input type="radio" id="type-bagpack-purse" name="choose-type" value="bagpackPurse" data-role="none" checked="">
+                     <label class="sort-btn" for="type-bagpack-purse"data-role="none">Glphs</label>
+
+                     <input type="radio" id="type-hobo-bag" name="choose-type" value="hoboBag" data-role="none">
+                     <label class="sort-btn" for="type-hobo-bag" data-role="none">Illustation</label>
+
+                     <input type="radio" id="type-bucket-bag" name="choose-type" value="bucketBag" data-role="none">
+                     <label class="sort-btn" for="type-bucket-bag" data-role="none">Flat</label>                   
+
+                     <input type="radio" id="type-minaudiere-clutch" name="choose-type" value="minaudiereClutch" data-role="none" checked="">
+                        <label class="sort-btn" for="type-minaudiere-clutch" data-role="none">Outline</label>
+
+                     <input type="radio" id="type-messenger-bag" name="choose-type" value="messengerBag" data-role="none">
+                     <label class="sort-btn" for="type-messenger-bag" data-role="none">3D</label>
+
+                     <input type="radio" id="type-baguette-bag" name="choose-type" value="baguetteBag" data-role="none">
+                     <label class="sort-btn" for="type-baguette-bag" data-role="none">Handdrawn</label>
+                   </div>
+            </div>
+
+            <div class="form-control">
+               <input class="form-button btn-big submit-add-new" type="submit" data-role="none"  data-ajax="false" value="Add" style="margin-top: 2em;-webkit-appearance: none;">
+
+            </div>
+         </form>
+      </div>
+   </div>
    </section>
 
+
+<!-- User Profile -->
    <section data-role="page"  id="user-profile-page">
       <header data-role="header">
-         <h1>User Profile</h1>
+         <h1>Profile</h1>
+            <ul class="nav flex-parent" style="text-align:center">
+               <li class="flex-none ui-btn-left">
+                  <a href="#setting-page" data-role="none" class="add-btn">
+                     <img src="imgs/setting.svg" alt="" width="18px" style="margin-top: 0.5em; margin-right: 0.5em;">
+                  </a>
+               </li>
+               <li class="flex-none ui-btn-right">
+                  <a href="#editting-profile" data-role="none" class="add-btn open-edit-user">
+                     <img src="imgs/editting.svg" alt="" width="18px" style="margin-top: 0.5em; margin-right: 0.5em;">
+                  </a>
+               </li>
+            </ul>
       </header>
       <div data-role="main">
-         <p><a href="#signin-page">Logout</a></p>
+         <div class="user-profile">
+            <div class="profile-handler">
+               <div class="profile-image">
+                  <img src="imgs/huan-profile.jpg" style="width:76vw;height:76vw;">
+               </div>
+               <div class="profile-title">
+                  <div style="color: #992C44; text-align: center;">
+                     <h2 style="margin-bottom:0;">Helena Meng</h2>
+                     <p style="margin-top: 0;">San Francisco, CA</p>
+                  </div>
+               </div>
+               <div class="profile-form">
+                  <ul class="profile-content-list">
+                     <li class="profile-content">
+                        <dl class="deflist">
+                           <dt>Name</dt>
+                           <dd>Helena Meng</dd>
+                           <dt>Gender</dt>
+                           <dd>Female</dd>
+                           <dt>Email</dt>
+                           <dd>huanmengdesign@gmail.com</dd>
+                           <dt>Username</dt>
+                           <dd>User0</dd>
+                           <dt>Icon Tracker</dt>
+                           <dd>15 Icons</dd> 
+                        </dl>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
       </div>
+      
+         <div style="text-align: center;">
+         <p><a href="#signin-page">Logout</a></p>
+         </div>
+
       <footer data-role="footer">
-         <ul>
-            <li><a href="#recent-page">Recent</a></li>
-            <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
+         <ul class="nav flex-parent" style="text-align:center">
+            <li class="flex-child active">
+               <a href="#recent-page">
+                  <img src="imgs/location.svg" alt="" width="24">
+               </a>
+            </li>
+            <li class="flex-child">
+               <a href="#list-page">
+                  <img src="imgs/list.svg" alt="" width="24">
+               </a>
+            </li>
+            <li class="flex-child">
+               <a href="#user-profile-page">
+                  <img src="imgs/profile.svg" alt="" width="24">
+               </a>
+            </li>
          </ul>
       </footer>
    </section>
-
+<!-- Icon Detail Page -->
    <section data-role="page"  id="icon-profile-page">
       <header data-role="header">
          <h1>Icon Page</h1>
@@ -132,9 +563,5 @@
          Icon Profile
       </div>
    </section>
-
-
-
-
 </body>
 </html>
