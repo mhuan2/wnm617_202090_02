@@ -8,7 +8,9 @@
    <link rel="stylesheet" href="css/app.css">
 
    <script src="lib/js/jquery-2.2.4.min.js"></script>
+   <script src="js/signin.js"></script>
    <script src="js/app.js"></script>
+
 
    <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 
@@ -31,8 +33,7 @@
                   <input id="signin-password" type="password" class="form-input" data-role="none" placeholder="Type your password here">
             </div>
             <div class="form-control">
-                  <a href="#recent-page" class="form-button">Sign In</a>
-               </label>
+                  <input type="submit" class="form-button" value="Sign In" data-role="none">
             </div>
             <div class="form-control signin-alt" >
                Don't have an account?
@@ -115,6 +116,7 @@
                </li>
             </ul>
       </header>
+    <div class="overscroll">
       <div class="list-page-bg" data-role="main">
          <div class="container list-page">
             <div data-role="main" class="flex-parent flex-vertical">
@@ -130,9 +132,10 @@
                      </div>
                   </form>
                </div>
+
                <div class="flex-child" style="position:relative;">
-                  <div class="icon-list">
-                    <div class="list-main">   
+                <div class="icon-list">
+                  <div class="list-main">   
                      <div class="icon-list">
                          <div class="icons flex-parent flex-align-center">
                              <div class="flex-none list-content media-image">
@@ -398,9 +401,11 @@
                          </div>
                      </div>
                   </div>
-               </div>
-               </div>
+                </div>
+              </div>
+
             </div>
+           </div>
          </div>
       </div>
       <footer data-role="footer">
@@ -425,8 +430,7 @@
    </section>
 <!-- ADD NEW PAGE -->
    <section data-role="page" id="page-add-new">
-   <div data-role="main" class="flex-parent flex-vertical flex-align-center"> 
-         <div class="big-title"><h1>Add New Icon</h1>
+<!--          <div class="big-title"><h1>Add New Icon</h1>
          </div>
          <ul>
             <div class="back">
@@ -434,9 +438,18 @@
                   <img src="imgs/back.svg" alt="" width="16">
                </a>
             </div>
-         </ul>
+         </ul> -->
+      <header data-role="header">
+         <h1>Add New Icon</h1>
+            <ul class="nav flex-parent">
+                  <a href="#" data-rel="back" class="ui-link">
+                     <img src="imgs/back.svg" alt="" width="16px" style="margin-top: 1em; margin-right: 1em;">
+                  </a>
+            </ul>
+      </header>
+  <div class="overscroll">
+    <div data-role="main" class="flex-parent flex-vertical flex-align-center"> 
       <div class="add-img-div" data-role="none" style="text-align: center;">
-
          <form id="list-add-form" data-role="none" data-ajax="false" style="width:70vw;">
             <label class="add-img imagepicker imagepicker-replace thumbnail" data-role="none">
                <input type="file" data-role="none">
@@ -453,31 +466,30 @@
                <label class="form-label" for="list-add-type">What style</label>                    
                   <div class="addnew-selections selection-field flex-justify-center" id="list-add-type">
                    
-                     <input type="radio" id="type-bagpack-purse" name="choose-type" value="bagpackPurse" data-role="none" checked="">
-                     <label class="sort-btn" for="type-bagpack-purse"data-role="none">Glphs</label>
+                     <input type="radio" id="type-icon-glphs" name="choose-type" value="iconGlphs" data-role="none" checked="">
+                     <label class="sort-btn" for="type-icon-glphs"data-role="none">Glphs</label>
 
-                     <input type="radio" id="type-hobo-bag" name="choose-type" value="hoboBag" data-role="none">
-                     <label class="sort-btn" for="type-hobo-bag" data-role="none">Illustation</label>
+                     <input type="radio" id="type-icon-illustration" name="choose-type" value="Illustration" data-role="none">
+                     <label class="sort-btn" for="type-icon-illustration" data-role="none">Illustration</label>
 
-                     <input type="radio" id="type-bucket-bag" name="choose-type" value="bucketBag" data-role="none">
-                     <label class="sort-btn" for="type-bucket-bag" data-role="none">Flat</label>                   
+                     <input type="radio" id="type-icon-flat" name="choose-type" value="iconFlat" data-role="none">
+                     <label class="sort-btn" for="type-icon-flat" data-role="none">Flat</label>                   
 
-                     <input type="radio" id="type-minaudiere-clutch" name="choose-type" value="minaudiereClutch" data-role="none" checked="">
-                        <label class="sort-btn" for="type-minaudiere-clutch" data-role="none">Outline</label>
+                     <input type="radio" id="type-icon-outline" name="choose-type" value="iconOutline" data-role="none" checked="">
+                        <label class="sort-btn" for="type-icon-outline" data-role="none">Outline</label>
 
-                     <input type="radio" id="type-messenger-bag" name="choose-type" value="messengerBag" data-role="none">
-                     <label class="sort-btn" for="type-messenger-bag" data-role="none">3D</label>
+                     <input type="radio" id="type-icon-3D" name="choose-type" value="icon3D" data-role="none">
+                     <label class="sort-btn" for="type-icon-3D" data-role="none">3D</label>
 
-                     <input type="radio" id="type-baguette-bag" name="choose-type" value="baguetteBag" data-role="none">
-                     <label class="sort-btn" for="type-baguette-bag" data-role="none">Handdrawn</label>
+                     <input type="radio" id="type-icon-handdrawn" name="choose-type" value="iconHanddrawn" data-role="none">
+                     <label class="sort-btn" for="type-icon-handdrawn" data-role="none">Handdrawn</label>
                    </div>
             </div>
-
             <div class="form-control">
                <input class="form-button btn-big submit-add-new" type="submit" data-role="none"  data-ajax="false" value="Add" style="margin-top: 2em;-webkit-appearance: none;">
-
             </div>
          </form>
+        </div>
       </div>
    </div>
    </section>
@@ -501,7 +513,8 @@
             </ul>
       </header>
       <div data-role="main">
-         <div class="user-profile">
+      <div class="overscroll">
+        <div class="user-profile">
             <div class="profile-handler">
                <div class="profile-image">
                   <img src="imgs/huan-profile.jpg" style="width:76vw;height:76vw;">
@@ -512,31 +525,38 @@
                      <p style="margin-top: 0;">San Francisco, CA</p>
                   </div>
                </div>
-               <div class="profile-form">
-                  <ul class="profile-content-list">
-                     <li class="profile-content">
-                        <dl class="deflist">
-                           <dt>Name</dt>
-                           <dd>Helena Meng</dd>
-                           <dt>Gender</dt>
-                           <dd>Female</dd>
-                           <dt>Email</dt>
-                           <dd>huanmengdesign@gmail.com</dd>
-                           <dt>Username</dt>
-                           <dd>User0</dd>
-                           <dt>Icon Tracker</dt>
-                           <dd>15 Icons</dd> 
-                        </dl>
-                     </li>
-                  </ul>
-               </div>
             </div>
-         </div>
+          <div data-role="main" style="padding:2em">
+            <form id="edit-icon-form" data-role=“none” data-ajax="false" style="width: relative;">
+                <div class="form-control">
+                   <label class="form-label" for="list-add-name">Name</label>
+                   <input class="form-input" type="text" id="list-add-name" data-role="none" style="text-align: center"; value="Helena Meng">
+                </div>            
+                <div class="form-control">
+                   <label class="form-label" for="list-add-brand">Gender</label>
+                   <input class="form-input" type="text" id="list-add-brand" data-role="none" style="text-align: center;"value="Female">
+                </div>            
+                <div class="form-control">
+                   <label class="form-label" for="list-add-type">Email</label>
+                  <input class="form-input" type="text" id="list-add-brand" data-role="none" style="text-align: center;"value="huanmengdesign@gmail.com">
+                </div>
+                <div class="form-control">
+                   <label class="form-label" for="list-add-type">Username</label>
+                  <input class="form-input" type="text" id="list-add-brand" data-role="none" style="text-align: center;"value="User0">
+                </div>
+                <div class="form-control">
+                   <label class="form-label" for="list-add-type">Icon Tracker</label>
+                  <input class="form-input" type="text" id="list-add-brand" data-role="none" style="text-align: center;"value="15 Icons">
+                </div>
+            </form> 
+           <div style="text-align: center;">
+           <p><a href="#signin-page">Logout</a></p>
+           </div>
+          </div>
+        </div>
       </div>
-      
-         <div style="text-align: center;">
-         <p><a href="#signin-page">Logout</a></p>
-         </div>
+    </div>
+
 
       <footer data-role="footer">
          <ul class="nav flex-parent" style="text-align:center">
@@ -560,15 +580,86 @@
    </section>
 <!-- Icon Detail Page -->
    <section data-role="page"  id="icon-profile-page">
-      <header data-role="header">
-         <h1>Icon Page</h1>
+      <header data-role="header" role="banner">
+         <h1 class="ui-title" role="heading" aria-level="1">Icon Page</h1>
          <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
+            <li><a href="#" data-rel="back" class="ui-link">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#icon-profile-edit" data-rel="edit" class="ui-link">Edit</a></li>
          </ul>
       </header>
-      <div data-role="main">
-         Icon Profile
+      <div data-role="main" class="flex-parent flex-vertical flex-align-center">
+        <div class="detail-img-box detail-img" data-role="none" style="text-align: center; margin-top:10%;margin-bottom: 10%;" >
+            <label data-role="none">
+               <img src="imgs/icon-01.svg" alt width="150px" style="border-radius: 50%;">
+            </label>
+        </div>
+  <div class="profile-bottom" style="flex:1,position:relative;overflow: hidden;">
+    <div class="overscroll">
+      <div data-role="main" style="padding:2em">
+        <form id="edit-icon-form" data-role=“none” data-ajax="false" style="width: relative;">
+            <div class="form-control">
+               <label class="form-label" for="list-add-name">Name</label>
+               <input class="form-input" type="text" id="list-add-name" data-role="none" style="text-align: center"; value="Street Board Icon">
+            </div>            
+            <div class="form-control">
+               <label class="form-label" for="list-add-brand">Content</label>
+               <input class="form-input" type="text" id="list-add-brand" data-role="none" style="text-align: center;"value="Champion">
+            </div>            
+            <div class="form-control">
+               <label class="form-label" for="list-add-type">Style</label>
+              <input class="form-input" type="text" id="list-add-brand" data-role="none" style="text-align: center;"value="Flat">
+            </div>
+            <div class="form-control">
+               <label class="form-label" for="list-add-type">Tracking Number</label>
+              <input class="form-input" type="text" id="list-add-brand" data-role="none" style="text-align: center;"value="1">
+            </div>
+        </form> 
+        <div data-role="main" class="display-flex flex-column" style="padding: 0.5em">
+           <label for="icon-profile-page" class="form-label">Icon location</label>
+              <div class="icon-profile-bottom" style="height: 200px;width: 100%;background-size: cover;background-position: center;flex: none;background-image: url(imgs/map.jpg);">
+              </div>
+        </div>
+    </div>
+  </div>
+</div>
+   </section>
+
+<!-- Edit Icon Profile Page -->
+   <section data-role="page"  id="icon-profile-edit">
+    <header data-role="header" role="banner">
+         <h1 class="ui-title" role="heading" aria-level="1">Edit Icon Profile</h1>
+         <ul>
+            <li><a href="#" data-rel="back" class="ui-link">Cancle</a></li>
+         </ul>
+    </header>
+      <div data-role="main" class="flex-parent flex-vertical flex-align-center">
+        <div class="detail-img-box detail-img" data-role="none" style="text-align: center; margin-top:10%;margin-bottom: 10%;" >
+            <label data-role="none">
+               <img src="imgs/icon-01.svg" alt width="150px" style="border-radius: 50%;">
+            </label>
+        </div>
+        <form id="edit-icon-form" data-role=“none” data-ajax="false" style="width: relative;">
+            <div class="form-control">
+               <label class="form-label" for="list-add-name">Change Name</label>
+               <input class="form-input" type="text" id="list-add-name" data-role="none" style="text-align: center;">
+            </div>            
+            <div class="form-control">
+               <label class="form-label" for="list-add-brand">Change Content</label>
+               <input class="form-input" type="text" id="list-add-brand" data-role="none" style="text-align: center;">
+            </div>            
+            <div class="form-control">
+               <label class="form-label" for="list-add-type">Change Style</label>
+              <input class="form-input" type="text" id="list-add-brand" data-role="none" style="text-align: center;">
+            </div>
+            <div class="form-control">
+               <input class="form-button btn-big submit-add-new" type="submit" data-role="none" data-deactivate="#icon-profile-page" value="Save">
+            </div>
+        </form>
       </div>
    </section>
+
+
+
 </body>
 </html>
