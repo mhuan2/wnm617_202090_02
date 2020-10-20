@@ -4,6 +4,7 @@
 
 - http://huanmengdesign.com
 - http://huanmengdesign.com/aau/wnm617_02/meng.huan
+- http://huanmengdesign.com/aau/wnm617_02/meng.huan/Meng_M03_Explorations.pdf
 - http://huanmengdesign.com/aau/wnm617_02/meng.huan/initializr
 - https://github.com/mhuan2/wnm617_202090_02/tree/master/meng.huan
 

@@ -430,15 +430,6 @@
    </section>
 <!-- ADD NEW PAGE -->
    <section data-role="page" id="page-add-new">
-<!--          <div class="big-title"><h1>Add New Icon</h1>
-         </div>
-         <ul>
-            <div class="back">
-               <a href="#back" data-rel="back" data-role="none" data-ajax="false">
-                  <img src="imgs/back.svg" alt="" width="16">
-               </a>
-            </div>
-         </ul> -->
       <header data-role="header">
          <h1>Add New Icon</h1>
             <ul class="nav flex-parent">
@@ -456,11 +447,11 @@
             </label>
             <div class="form-control">
                <label class="form-label" for="list-add-name">Create a name</label>
-               <input class="form-input" type="text" id="list-add-name" data-role="none" style="text-align: center;">
+               <input class="form-input" type="text" class="list-add-name" data-role="none" style="text-align: center;">
             </div>            
             <div class="form-control">
                <label class="form-label" for="list-add-brand">What's the content</label>
-               <input class="form-input" type="text" id="list-add-brand" data-role="none" style="text-align: center;">
+               <input class="form-input" type="text" class="list-add-brand" data-role="none" style="text-align: center;">
             </div>            
             <div class="form-control">
                <label class="form-label" for="list-add-type">What style</label>                    
@@ -485,11 +476,11 @@
                      <label class="sort-btn" for="type-icon-handdrawn" data-role="none">Handdrawn</label>
                    </div>
             </div>
-            <div class="form-control">
-               <input class="form-button btn-big submit-add-new" type="submit" data-role="none"  data-ajax="false" value="Add" style="margin-top: 2em;-webkit-appearance: none;">
-            </div>
          </form>
+        <div class="form-control">
+           <input class="form-button btn-big submit-add-new" type="submit" data-role="none"  data-ajax="false" value="Add" style="margin-top: 2em;-webkit-appearance: none;">
         </div>
+    </div>
       </div>
    </div>
    </section>
@@ -519,34 +510,28 @@
                <div class="profile-image">
                   <img src="imgs/huan-profile.jpg" style="width:76vw;height:76vw;">
                </div>
-               <div class="profile-title">
-                  <div style="color: #992C44; text-align: center;">
-                     <h2 style="margin-bottom:0;">Helena Meng</h2>
-                     <p style="margin-top: 0;">San Francisco, CA</p>
-                  </div>
-               </div>
             </div>
           <div data-role="main" style="padding:2em">
-            <form id="edit-icon-form" data-role=“none” data-ajax="false" style="width: relative;">
+            <form class="edit-icon-form" data-role=“none” data-ajax="false" style="width: relative;">
                 <div class="form-control">
                    <label class="form-label" for="list-add-name">Name</label>
-                   <input class="form-input" type="text" id="list-add-name" data-role="none" style="text-align: center"; value="Helena Meng">
+                   <input class="form-input" type="text" class="list-add-name" data-role="none" style="text-align: center"; value="Helena Meng">
                 </div>            
                 <div class="form-control">
                    <label class="form-label" for="list-add-brand">Gender</label>
-                   <input class="form-input" type="text" id="list-add-brand" data-role="none" style="text-align: center;"value="Female">
+                   <input class="form-input" type="text" class="list-add-brand" data-role="none" style="text-align: center;"value="Female">
                 </div>            
                 <div class="form-control">
                    <label class="form-label" for="list-add-type">Email</label>
-                  <input class="form-input" type="text" id="list-add-brand" data-role="none" style="text-align: center;"value="huanmengdesign@gmail.com">
+                  <input class="form-input" type="text" clss="list-add-brand" data-role="none" style="text-align: center;"value="huanmengdesign@gmail.com">
                 </div>
                 <div class="form-control">
                    <label class="form-label" for="list-add-type">Username</label>
-                  <input class="form-input" type="text" id="list-add-brand" data-role="none" style="text-align: center;"value="User0">
+                  <input class="form-input" type="text" clss="list-add-brand" data-role="none" style="text-align: center;"value="User0">
                 </div>
                 <div class="form-control">
                    <label class="form-label" for="list-add-type">Icon Tracker</label>
-                  <input class="form-input" type="text" id="list-add-brand" data-role="none" style="text-align: center;"value="15 Icons">
+                  <input class="form-input" type="text" clss="list-add-brand" data-role="none" style="text-align: center;"value="15 Icons">
                 </div>
             </form> 
            <div style="text-align: center;">
@@ -597,22 +582,22 @@
   <div class="profile-bottom" style="flex:1,position:relative;overflow: hidden;">
     <div class="overscroll">
       <div data-role="main" style="padding:2em">
-        <form id="edit-icon-form" data-role=“none” data-ajax="false" style="width: relative;">
+        <form class="edit-icon-form" data-role=“none” data-ajax="false" style="width: relative;">
             <div class="form-control">
                <label class="form-label" for="list-add-name">Name</label>
-               <input class="form-input" type="text" id="list-add-name" data-role="none" style="text-align: center"; value="Street Board Icon">
+               <input class="form-input" type="text" class="list-add-name" data-role="none" style="text-align: center"; value="Street Board Icon">
             </div>            
             <div class="form-control">
                <label class="form-label" for="list-add-brand">Content</label>
-               <input class="form-input" type="text" id="list-add-brand" data-role="none" style="text-align: center;"value="Champion">
+               <input class="form-input" type="text" class="list-add-brand" data-role="none" style="text-align: center;"value="Champion">
             </div>            
             <div class="form-control">
                <label class="form-label" for="list-add-type">Style</label>
-              <input class="form-input" type="text" id="list-add-brand" data-role="none" style="text-align: center;"value="Flat">
+              <input class="form-input" type="text" class="list-add-brand" data-role="none" style="text-align: center;"value="Flat">
             </div>
             <div class="form-control">
                <label class="form-label" for="list-add-type">Tracking Number</label>
-              <input class="form-input" type="text" id="list-add-brand" data-role="none" style="text-align: center;"value="1">
+              <input class="form-input" type="text" class="list-add-brand" data-role="none" style="text-align: center;"value="1">
             </div>
         </form> 
         <div data-role="main" class="display-flex flex-column" style="padding: 0.5em">
@@ -639,18 +624,18 @@
                <img src="imgs/icon-01.svg" alt width="150px" style="border-radius: 50%;">
             </label>
         </div>
-        <form id="edit-icon-form" data-role=“none” data-ajax="false" style="width: relative;">
+        <form class="edit-icon-form" data-role=“none” data-ajax="false" style="width: relative;">
             <div class="form-control">
                <label class="form-label" for="list-add-name">Change Name</label>
-               <input class="form-input" type="text" id="list-add-name" data-role="none" style="text-align: center;">
+               <input class="form-input" type="text" class="list-add-name" data-role="none" style="text-align: center;">
             </div>            
             <div class="form-control">
                <label class="form-label" for="list-add-brand">Change Content</label>
-               <input class="form-input" type="text" id="list-add-brand" data-role="none" style="text-align: center;">
+               <input class="form-input" type="text" class="list-add-brand" data-role="none" style="text-align: center;">
             </div>            
             <div class="form-control">
                <label class="form-label" for="list-add-type">Change Style</label>
-              <input class="form-input" type="text" id="list-add-brand" data-role="none" style="text-align: center;">
+              <input class="form-input" type="text" class="list-add-brand" data-role="none" style="text-align: center;">
             </div>
             <div class="form-control">
                <input class="form-button btn-big submit-add-new" type="submit" data-role="none" data-deactivate="#icon-profile-page" value="Save">
@@ -658,8 +643,5 @@
         </form>
       </div>
    </section>
-
-
-
 </body>
 </html>
