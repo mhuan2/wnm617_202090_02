@@ -426,13 +426,41 @@ ul.nav {
     left: 20px;
     top: 20px;
 }
+
+/*Onboarding*/
 .onboarding-img{
-  width: 250px;
-  margin-top: 20px;
-  margin-right: auto;
-  margin-bottom: 20px;
-  margin-left: auto;
+   width: 250px;
+   margin:20px auto;
 }
+
+.onboarding-img img{
+   max-width: 100%;
+}
+
+.onboarding-description{
+    width: 80vw;
+    margin: 10px auto;
+}
+
+a.onboarding-next-btn.ui-link {
+    display: block;
+    background-color: var(--color-neutral-medium);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+}
+
+a.onboarding-back-btn.ui-link {
+    color: var(--color-neutral-medium);
+    padding: 10px 0;
+    display: block;
+}
+
+.onboarding-btn-div{
+   width: 90vw;
+   padding: 0 1em;
+}
+
 /* This will hide the file input */
 .imagepicker input {
   display:none;
