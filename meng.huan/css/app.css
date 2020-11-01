@@ -426,7 +426,13 @@ ul.nav {
     left: 20px;
     top: 20px;
 }
-
+.onboarding-img{
+  width: 250px;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-left: auto;
+}
 /* This will hide the file input */
 .imagepicker input {
   display:none;

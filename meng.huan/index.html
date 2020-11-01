@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
+   <link rel="icon" 
+      type="imgs/png" 
+      href="http://huanmengdesign.com/aau/wnm617_02/meng.huan/imgs/myicon.png">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Icon Tracker</title>
+   <title>Locket</title>
    <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
    <link rel="stylesheet" href="css/app.css">
 
@@ -11,12 +14,12 @@
    <script src="js/signin.js"></script>
    <script src="js/app.js"></script>
 
-
    <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 
 </head>
 <body>
 
+<!--   SIGNIN PAGE -->
    <section data-role="page"  id="signin-page">
       <div data-role="main" class="display-flex flex-column">
          <div class="flex-stretch display-flex flex-align-center flex-justify-center">
@@ -47,9 +50,9 @@
           <div class="message">Message</div>
         </div>
       </div>
-
    </section>
 
+<!-- SIGNUP PAGE -->
    <section data-role="page"  id="signup-page">
       <div data-role="main" class="display-flex flex-align-center flex-justify-center">
          <form id="signup-form" data-ajax="false">
@@ -63,7 +66,7 @@
             </div>
             <div class="form-control">
                <label for="signup-password-confirm" class="form-label">Confirm your password</label>
-                  <input id="signup-password" type="password" class="form-input" data-role="none" placeholder="Confirm your password here">
+                  <input id="signup-password-confirm" type="password" class="form-input" data-role="none" placeholder="Confirm your password here">
             </div>
             <div class="form-control">
                   <a href="#recent-page" class="form-button">Sign Up</a>
@@ -77,9 +80,84 @@
       </div>
    </section>
 
+<!--   ONBOARDING PAGE -->
+  <section data-role="page" id="onboarding1-page">
+    <div data-role="main" class="display-flex flex-column flex-justify-center flex-align-center">
+      <div class="onboarding-title">
+        <h2>Welcome to Locket</h2>
+      </div>
+      <div class="onboarding-img"> 
+        <img src="imgs/onboarding-1.gif" style="width:76vw;height:106vw;">
+      </div>
+      <div class="onboarding-description">
+        <h3>Save what logo that is really interest you </h3>
+        <p>Collet whatever you like about logos. Settle in with them anytime, on any phone, tablet or browser.</p>
+      </div>
+      <div class="display-flex space-between onboarding-btn-div">
+        <div class="flex-stretch">
+          <a href="#" style="color: white;" >Back</a>
+        </div>
+        
+        <div class="flex-none">
+          <a href="#onboarding2-page" class="onboarding-next-btn ">Next</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section data-role="page" id="onboarding2-page">
+    <div data-role="main" class="display-flex flex-column flex-justify-center flex-align-center">
+      <div class="onboarding-title">
+        <h2>Welcome to Lucket</h2>
+      </div>
+      <div class="onboarding-img"> 
+        <img src="imgs/onboarding-2.gif" style="width:76vw;height:106vw;">
+      </div>
+      <div class="onboarding-description">
+        <h3>Make the most of any moment</h3>
+        <p>Save from anywhere. Your inspired logos will be ready for you in Locket.</p>
+      </div>
+      <div class="display-flex ">
+        <div class="display-flex space-between onboarding-btn-div">
+        <div class="flex-stretch">
+          <a href="#onboarding1-page" class="onboarding-back-btn ">Back</a>
+        </div>
+        
+        <div class="flex-none">
+          <a href="#onboarding3-page" class="onboarding-next-btn ">Next</a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+    <section data-role="page" id="onboarding3-page">
+    <div data-role="main" class="display-flex flex-column flex-justify-center flex-align-center">
+      <div class="onboarding-title">
+        <h2>Welcome to Locket</h2>
+      </div>
+      <div class="onboarding-img"> 
+        <img src="imgs/onboarding-3.gif"style="width:76vw;height:106vw;">
+      </div>
+      <div class="onboarding-description">
+        <h3>Your quiet corner of the inspiration</h3>
+        <p>Locket saves logos in a clean layout designed for checking- no interruptions, no popups- so you can sidestep the internet's no noise, and own your inspired logo journal</p>
+      </div>
+      <div class="display-flex space-between onboarding-btn-div">
+        <div class="flex-stretch">
+          <a href="#onboarding2-page" class="onboarding-back-btn ">Back</a>
+        </div>
+        
+        <div class="flex-none">
+          <a href="#recent-page" class="onboarding-next-btn ">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- RECENT PAGE -->
    <section data-role="page" id="recent-page">
       <header data-role="header">
-         <h1>Icon Tracker</h1>
+         <h1>Locket</h1>
       </header>
       <div data-role="main"></div>  
       <footer data-role="footer">
@@ -429,6 +507,7 @@
             </ul>
       </footer>
    </section>
+
 <!-- ADD NEW PAGE -->
    <section data-role="page" id="page-add-new">
       <header data-role="header">
@@ -543,7 +622,6 @@
       </div>
     </div>
 
-
       <footer data-role="footer">
          <ul class="nav flex-parent" style="text-align:center">
             <li class="flex-child active">
@@ -564,6 +642,7 @@
          </ul>
       </footer>
    </section>
+
 <!-- Icon Detail Page -->
    <section data-role="page"  id="icon-profile-page">
       <header data-role="header" role="banner">

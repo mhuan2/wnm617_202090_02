@@ -14,7 +14,7 @@ const checkSigninForm = () => {
    let user = $("#signin-username").val();
    let pass = $("#signin-password").val();
 
-   console.log(user,pass)
+   // console.log(user,pass)
    if(user=="" || pass=="") {
       makeWarning("#warning-modal","Type a Username and Password");
       return;
@@ -49,6 +49,6 @@ const checkUserId = () => {
    } else {
       // logged in
       if(p.some(o=>window.location.hash===o))
-         $.mobile.navigate("#recent-page");
+         $.mobile.navigate("#onboarding1-page");
    }
 }
